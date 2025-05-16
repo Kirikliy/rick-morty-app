@@ -2,13 +2,15 @@ import { CHARACTER_STATUS } from "./consts";
 
 export type CharacterStatus = (typeof CHARACTER_STATUS)[number];
 
+export type CharacterGender = "Female" | "Male" | "Genderless" | "unknown";
+
 export type Character = {
   id: number;
   name: string;
   status: CharacterStatus;
   species: string;
   type: string;
-  gender: string;
+  gender: CharacterGender;
   origin: {
     name: string;
     url: string;
